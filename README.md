@@ -41,6 +41,11 @@ Consulta el archivo `main.ino` para más detalles sobre la implementación.
 
 ## 📷 Interfaz Web  
 
-1. Servidor integrado: El servidor integrado genera una interfaz visual amigable con actualizaciones automáticas.  
+1. Servidor integrado: El servidor integrado genera una interfaz visual amigable con actualizaciones automáticas. 
+![Web integrada](https://github.com/Club-Team-ESPE/proyecto-iot-monitoreo-ambiental/docs/interfaz-web-esp8266.png)
+
 2. Sitio web desplegable en la nube: Creado con ANGULAR JS, consiste en un cliente que consume los datos alojados en la nube y muestra las estadísticas.
+
+![Web desplegable](https://github.com/Club-Team-ESPE/proyecto-iot-monitoreo-ambiental/docs/interfaz-web2.png)
+
 
