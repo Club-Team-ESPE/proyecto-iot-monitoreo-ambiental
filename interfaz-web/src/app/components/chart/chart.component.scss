@@ -1,0 +1,153 @@
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    .card-title {
+      margin: 0;
+      color: white !important;
+      font-weight: 600;
+    }
+    
+    i {
+      font-size: 1.5rem;
+      color: white !important;
+    }
+  }
+  
+  .card-body {
+    padding: 15px;
+    
+    .stat-container {
+      display: flex;
+      justify-content: space-between;
+      
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .stat-label {
+          font-size: 0.8rem;
+          color: rgba(255, 255, 255) !important;
+          margin-bottom: 5px;
+        }
+        
+        .stat-value {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: white !important;
+        }
+      }
+    }
+  }
+}
+
+.bg-primary {
+  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+}
+
+.bg-success {
+  background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%);
+}
+
+.bg-info {
+  background: linear-gradient(135deg, #36b9cc 0%, #258391 100%);
+}
+
+.bg-danger {
+  background: linear-gradient(135deg, #e74a3b 0%, #be2617 100%);
+}
+
+.chart-container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  overflow: hidden;
+  
+  .chart-header {
+    padding: 15px;
+    border-bottom: 1px solid #e3e6f0;
+    
+    h4 {
+      margin: 0;
+      font-weight: 600;
+      color: #4e73df;
+    }
+  }
+  
+  .chart-body {
+    padding: 15px;
+    height: 300px;
+  }
+}
+
+.chart-card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    
+    .card-title {
+      margin: 0;
+      color: white !important;
+      font-weight: 600;
+    }
+    
+    i {
+      font-size: 1.5rem;
+      color: white !important;
+    }
+  }
+  
+  .card-body {
+    padding: 15px;
+    
+    .stat-summary {
+      display: flex;
+      justify-content: space-between;
+      
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .stat-label {
+          font-size: 0.8rem;
+          color: white !important;
+          margin-bottom: 5px;
+        }
+        
+        .stat-value {
+          font-size: 1.2rem;
+          font-weight: 700;
+          color: white !important;
+        }
+      }
+    }
+  }
+}

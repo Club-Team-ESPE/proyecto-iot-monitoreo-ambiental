@@ -1,0 +1,28 @@
+/* src/styles.scss */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #5a5c69;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start !important;
+    
+    .controls {
+      margin-top: 15px;
+      width: 100%;
+    }
+  }
+}

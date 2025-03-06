@@ -1,0 +1,30 @@
+<div class="chart-card" [ngClass]="'bg-' + color">
+  <div class="card-header">
+    <h4 class="card-title">{{ title }}</h4>
+    <i class="fas" [ngClass]="icon"></i>
+  </div>
+  <div class="card-body">
+    <div class="chart-container">
+      <canvas baseChart
+        [type]="chartType"
+        [data]="chartData"
+        [options]="chartOptions"
+        height="250">
+      </canvas>
+    </div>
+    <div class="stat-summary">
+      <div class="stat-item">
+        <span class="stat-label">Promedio</span>
+        <span class="stat-value">{{ average | number:'1.1-1' }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Máximo</span>
+        <span class="stat-value">{{ max | number:'1.1-1' }}</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-label">Mínimo</span>
+        <span class="stat-value">{{ min | number:'1.1-1' }}</span>
+      </div>
+    </div>
+  </div>
+</div>
