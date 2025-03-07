@@ -39,6 +39,15 @@
       icon="fa-smog"
       color="success">
     </app-stats-card>
+    
+    <app-stats-card
+      title="Distancia"
+      [average]="summaryStats.Promedio_Distancia"
+      [max]="summaryStats.Max_Distancia"
+      [min]="summaryStats.Min_Distancia"
+      icon="fa-ruler"
+      color="primary">
+    </app-stats-card>
   </div>
   
   <!-- Gráficos -->
@@ -62,6 +71,13 @@
       [chartType]="selectedChartType"
       dataType="Contaminacion"
       title="Evolución de Contaminación">
+    </app-chart>
+    
+    <app-chart
+      [timeSeriesData]="timeSeriesData"
+      [chartType]="selectedChartType"
+      dataType="Distancia"
+      title="Evolución de Distancia">
     </app-chart>
   </div>
   

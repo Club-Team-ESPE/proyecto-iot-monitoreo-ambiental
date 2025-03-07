@@ -20,7 +20,7 @@ export class ChartComponent implements OnChanges{
   @Input() timeSeriesData: TimeSeriesData[] = [];
   @Input() title: string = '';
   @Input() chartType: 'line' | 'bar' = 'line';
-  @Input() dataType: 'Temperatura' | 'Humedad' | 'Contaminacion' = 'Temperatura';
+  @Input() dataType: 'Temperatura' | 'Humedad' | 'Contaminacion' | 'Distancia' = 'Temperatura';
   
   chartData: ChartData<'line' | 'bar'> = {
     labels: [],
@@ -73,25 +73,25 @@ export class ChartComponent implements OnChanges{
     
     console.log('Datos para la gráfica:', this.timeSeriesData);
   
-  // Convertir las fechas a objetos Date
-  const labels = this.timeSeriesData.map(item => {
-    if (item.timestamp) {
-      // La fecha viene en formato "2025-03-05 23:47:27"
-      return new Date(item.timestamp);
-    } else {
-      // Fallback por si no hay timestamp
-      return new Date();
-    }
-  });
-  
-  // Verificar si hay fechas inválidas
-  if (labels.some(date => isNaN(date.getTime()))) {
-    console.warn('Hay fechas inválidas en los datos');
-    console.log('Ejemplos de fechas problemáticas:', 
-      this.timeSeriesData.filter(item => isNaN(new Date(item.timestamp).getTime()))
-        .map(item => item.timestamp));
-  }
+    // Convertir las fechas a objetos Date
+    const labels = this.timeSeriesData.map(item => {
+      if (item.timestamp) {
+        // La fecha viene en formato "2025-03-05 23:47:27"
+        return new Date(item.timestamp);
+      } else {
+        // Fallback por si no hay timestamp
+        return new Date();
+      }
+    });
     
+    // Verificar si hay fechas inválidas
+    if (labels.some(date => isNaN(date.getTime()))) {
+      console.warn('Hay fechas inválidas en los datos');
+      console.log('Ejemplos de fechas problemáticas:', 
+        this.timeSeriesData.filter(item => isNaN(new Date(item.timestamp).getTime()))
+          .map(item => item.timestamp));
+    }
+      
     const data = this.timeSeriesData.map(item => item[this.dataType]);
     
     // Actualizar estadísticas si no se proporcionan externamente
@@ -117,6 +117,12 @@ export class ChartComponent implements OnChanges{
     } else if (this.dataType === 'Humedad') {
       backgroundColor = 'rgba(75, 192, 192, 0.2)';
       borderColor = 'rgba(75, 192, 192, 1)';
+    } else if (this.dataType === 'Contaminacion') {
+      backgroundColor = 'rgba(255, 206, 86, 0.2)';
+      borderColor = 'rgba(255, 206, 86, 1)';
+    } else if (this.dataType === 'Distancia') {
+      backgroundColor = 'rgba(153, 102, 255, 0.2)';
+      borderColor = 'rgba(153, 102, 255, 1)';
     }
     
     this.chartData = {
